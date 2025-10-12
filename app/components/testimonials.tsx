@@ -2,7 +2,7 @@
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 function Testimonials() {
   return (
-    <div id="testimonials" className="mx-auto md:px-[1rem] px-[2rem] py-[3rem] rounded-md flex flex-col antialiased bg-white items-center justify-center relative overflow-hidden ">
+    <div id="testimonials" className="mx-auto md:px-[1rem] px-[2rem] py-[2rem] rounded-md flex flex-col antialiased bg-white items-center justify-center relative overflow-hidden ">
       <h2 className="max-w-6xl my-12 pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 font-sans">What our Clients Say!</h2>
       <InfiniteMovingCards
         items={testimonials}
@@ -33,7 +33,7 @@ const testimonials = [
     quote: "I am very pleased with the clean! and i would like to schedule regular cleans",
     name: "Edgar Allan Poe",
     // title: "A Dream Within a Dream",
-    value: 4,
+    value: 5,
   },
   {
     quote:

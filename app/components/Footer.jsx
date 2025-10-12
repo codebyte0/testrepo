@@ -7,7 +7,6 @@ import {
 } from "react-icons/fa";
 import Image from "next/image";
 import logo from "../assets/logo.png";
-import useEdmontonAreaDetection from "../hooks/useCityName";
 
 const Footer = () => {
   const links = [
@@ -16,11 +15,10 @@ const Footer = () => {
     { id: 4, name: "Testimonials", url: "#testimonials" },
     { id: 5, name: "Get a Quote", url: "#booknow" },
   ];
-  const { displayName } = useEdmontonAreaDetection();
 
   return (
     <div className="bg-[#faf8f8fd] text-black mt-14 rounded-t-3xl flex justify-center items-center w-full">
-      <div data-="fade" className="container flex flex-col items-center">
+      <div className="container flex flex-col items-center">
         <div className="logo">
           <Image width={150} height={150} src={logo} alt="Maple Leaf Cleaners Plus Logo" />
         </div>
@@ -34,18 +32,16 @@ const Footer = () => {
           {/* Company details */}
           <div className="py-8 px-4">
             {/* Social handles */}
-            {displayName === "St. Albert" && (
-              <Link
-                className="flex items-center gap-1 justify-center"
-                href="https://www.facebook.com/profile.php?id=61565494418337"
-                aria-label="Facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaFacebook className="text-black" />
-                Facebook page
-              </Link>
-            )}
+            <Link
+              className="flex items-center gap-1 justify-center"
+              href="https://www.facebook.com/profile.php?id=61565494418337"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebook className="text-black" />
+              Facebook page
+            </Link>
             <Link 
               className="flex items-center gap-1 mt-3" 
               href="https://mapleleafcleanersplus.com"
@@ -68,16 +64,10 @@ const Footer = () => {
             <div className="py-8 px-4">
               <ul className="space-y-3">
                 {links.map((link) => (
-                  <li
-                    key={link.id}
-                    className="hover:translate-x-1 duration-300"
-                  >
-                    <a
-                      href={link.url}
-                      className="cursor-pointer text-black hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r from-yellow-400 to-yellow-700"
-                    >
+                  <li key={link.id}>
+                    <Link href={link.url} className="hover:underline">
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

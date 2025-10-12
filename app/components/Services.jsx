@@ -1,8 +1,8 @@
-import {AppleCardsCarouselDemo} from './ui/Cards';
+import ServiceCards from './ui/Cards';
 const Services = () => {
   return (
     <div id='services'>
-      <AppleCardsCarouselDemo/>
+      <ServiceCards/>
     </div>
   )
 }

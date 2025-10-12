@@ -44,7 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Toaster />
         
         {/* Tawk.to Script */}
-        <Script
+        {/* <Script
           id="tawkto-script"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -60,7 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               })();
             `,
           }}
-        />
+        /> */}
 
         {/* Google Tag Manager Script */}
         <Script

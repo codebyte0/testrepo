@@ -111,9 +111,9 @@ const About = () => {
                       How do I book a service?
                     </AccordionTrigger>
                     <AccordionContent>
-                      Booking a service is easy! You can use our online booking
-                      system or contact us directly via our chat widget on the
-                      website or via{" "}
+                      Booking a service is easy! You can use my online booking
+                      system on my website or contact me directly via my Facebook Page
+                      or email at{" "}
                       <a href="mailto:mapleleafcleanersplus@gmail.com">
                         mapleleafcleanersplus@gmail.com
                       </a>
@@ -132,13 +132,13 @@ const About = () => {
                   </AccordionItem>
                 </Accordion>
               </motion.div>
-                <Button
-                  className="px-4 py-2 bg-yellow-400 hover:bg-yellow-400 hover:scale-105 text-white rounded-s-xl rounded-e-xl rounded-tl-none font-bold relative left-[2.1px] flex items-center justify-center gap-2"
-                  onClick={openTalkToChat}
-                >
-                  Talk to our chat
-                  <FaLocationArrow />
-                </Button>
+                <button
+  className="px-4 py-2 bg-yellow-400 hover:bg-yellow-400 hover:scale-105 text-white rounded-s-xl rounded-e-xl rounded-tl-none font-bold relative left-[2.1px] flex items-center justify-center gap-2 transition-transform duration-200"
+  onClick={() => window.location.href = "mailto:mapleleafcleanersplus@gmail.com"}
+>
+  Email me
+  <FaLocationArrow />
+</button>
             </div>
           </motion.div>
         </div>

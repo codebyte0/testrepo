@@ -12,22 +12,19 @@ import { Rating } from "@mui/material";
 import { motion } from "framer-motion";
 import TypingEffect from "./ui/TypeEffect";
 import { ScrollParallax } from "react-just-parallax";
-import useEdmontonAreaDetection from '../hooks/useCityName';
 
 const Header = () => {
   const count_up_ref_1 = useRef(null);
   const count_up_ref_2 = useRef(null);
-
-  const { displayName } = useEdmontonAreaDetection();
   const parallaxRef = useRef(null);
 
   // CountUp effect for numbers
   useEffect(() => {
     const count_up_1 = new CountUp(count_up_ref_1.current, 1200, {
-      duration: 3, // 2 seconds
+      duration: 3,
     });
     const count_up_2 = new CountUp(count_up_ref_2.current, 4, {
-      duration: 3, // 1.5 seconds
+      duration: 3,
     });
     if (!count_up_1.error && !count_up_2.error) {
       count_up_1.start();
@@ -55,6 +52,7 @@ const Header = () => {
       transition: { duration: 0.8, ease: "easeOut" },
     },
   };
+  
   return (
     <div className="w-full bg-[#fdf7f3]" id="home">
       <div className="max-w-6xl mx-auto container px-[2rem] md:px-[1rem]">
@@ -87,8 +85,7 @@ const Header = () => {
 
             <motion.p className="text-lg -translate-3" variants={textVariant}>
               Leave the cleaning to us. At Maple Leaf Cleaners, we provide
-              thorough, reliable cleaning services in {displayName} and
-              surrounding areas, so you can enjoy a pristine home without the
+              thorough, reliable cleaning services so you can enjoy a pristine home without the
               hassle.
             </motion.p>
 
@@ -153,8 +150,8 @@ const Header = () => {
             </motion.div>
 
             <ScrollParallax
-              strength={0.1} // This reduces the movement sensitivity
-              lerpEase={0.1} // Smoothens the scroll effect
+              strength={0.1}
+              lerpEase={0.1}
               className="!z-50 fixed"
               isAbsolutelyPositioned
               style={{ zIndex: 1000 }}
